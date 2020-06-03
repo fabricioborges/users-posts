@@ -1,10 +1,22 @@
 import React, {useState, useEffect} from 'react';
+import IPostUser from './IPostUser';
+import './styles.css';
 
-const Post: React.FC = () => {
+interface Props {
+    posts: IPostUser;
+}
+
+const Post: React.FC<Props> = ({ posts }) => {
     return(
-        <div>
-            
-        </div>
+        <li className="user-item">
+            <header>
+                <div className="user-info">
+                    <strong>Nome: {posts.user.name}</strong><br />
+                    <strong>Companhia: {posts.user.company.name}</strong><br />                    
+                </div>
+            </header>
+            <p>{posts.posts.title}</p>
+        </li>
     );
 }
 
