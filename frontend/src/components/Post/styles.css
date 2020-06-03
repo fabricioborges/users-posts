@@ -24,17 +24,17 @@ li.user-item header .user-info {
 
 li.user-item p {
     color: #666;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     margin: 10px 0;
 }
 
 li.user-item a {
-    color: #8e4dff;
-    font-size: 14px;
+    color: #323232;
+    font-size: 16px;
     text-decoration: none;
 }
 
 li.user-item a:hover { 
-    color: #5a2ea6;
+    color: #000;
 }
