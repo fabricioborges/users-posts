@@ -11,7 +11,6 @@ function App() {
       <main>
         <Post />
       </main>
-
     </div>
   );
 }

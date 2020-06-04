@@ -14,19 +14,13 @@ export default {
         const userService = new UserService();
         const postService = new PostService()
 
-        const users = await userService.getUsers();
+        const id = Number.parseInt(req.params.id);
 
-        const posts = await postService.getPosts(
-            users.map(user => user.id));
+        const user = await userService.getUserById(id);
 
-        const userPosts: IPostUser[] = [];
+        const posts = await postService.getPost(user.id);
 
-        users.forEach(function (user) {
-            const postsUser = posts.filter(post =>
-                post.userId === user.id);
-
-            userPosts.push({ user: user, posts: postsUser });
-        })
+        const userPosts: IPostUser = { user: user, posts: posts };
 
         return res.json(userPosts);
     }

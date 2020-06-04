@@ -10,6 +10,12 @@ class UserService {
 
         return usersCompanyGroup
     }
+
+    async getUserById(id: number){
+        const user: IUser = await (await axios.get(`http://jsonplaceholder.typicode.com/users/${id}`)).data;
+
+        return user;
+    }
 }
 
 export default UserService;

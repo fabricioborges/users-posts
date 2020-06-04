@@ -9,6 +9,14 @@ class PostService {
 
         return posts;
     }
+
+    async getPost(id: number) {
+        const allPosts: IPost[] = await (await axios.get(`http://jsonplaceholder.typicode.com/posts/`)).data;
+
+        const posts = allPosts.filter(post => post.userId === id);
+
+        return posts;
+    }
 }
 
 export default PostService;

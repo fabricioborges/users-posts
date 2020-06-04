@@ -4,9 +4,10 @@ main {
 
 main ul {
     display: grid;
-    grid-template-columns:  repeat(1, 1fr);
+    grid-template-columns:  repeat(1, 0.85fr);
     gap: 20px;
     list-style: none;
+    margin-left: 250px;
 }
 
 @media (max-width: 650px) {
